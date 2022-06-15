@@ -1,0 +1,872 @@
+body{
+	margin:0;
+	font-family: Verdana, sans-serif;
+	font-size:20px;
+	overflow-x:hidden;
+}
+
+/* navigation */
+.flex-container  {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: pink;
+}
+
+.logo2{
+	height:40px;
+	width:40px;
+}
+
+.logo {
+  margin: 0 0 0 30px;
+}
+    .logo a {
+      color: white;
+    }
+
+    .logo, .navigation {
+        list-style: none;
+    }
+
+    .logo a, .navigation a {
+        text-decoration: none;
+    }
+
+.navigation  {
+  display: flex;
+}
+
+.navigation a {
+  display: block;
+  padding: 1em;
+  color: white;
+}
+
+.navigation a:hover {
+    background: lightblue;
+}
+
+
+
+/* NAVIGATION */
+@media all and (max-width:1125px) {
+  .flex-container {
+    flex-direction: column;
+  }
+  
+  .logo {
+  margin: 0;
+}
+  
+  .navigation  {
+    width: 100%;
+    justify-content: space-around;
+  }
+}
+
+@media all and (max-width: 800px) {
+ 
+  .logo {
+    margin: .25em 0;
+    align-self: left;
+}
+  
+  .navigation {
+    flex-direction: column;
+  }
+  
+  .navigation a { 
+    text-align: center; 
+    padding: 10px;
+    border-top: 1px solid rgba(255,255,255,0.3); 
+    border-bottom: 1px solid rgba(0,0,0,0.1); 
+  }
+  
+  .navigation li:last-of-type a {
+    border-bottom: none;
+  }
+  .dropdown:hover .dropdown-content {
+  width:100%;
+	}
+	.dropdown{
+	width:100%;
+	}
+}
+
+/*DROPDOWN*/
+.dropdown-content a {
+  float: none;
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color:lightblue;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: pink;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px grey;
+  z-index: 1;
+}
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+
+/*rozdelenie obrazovky*/
+
+.container {
+  display: flex; 
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content:space-around;
+  align-items:flex-start;
+}
+
+
+/*TOTO POUZIVAM KVOLI RESPONZIVITE ABY MI NEZAVADZAL FOOTER*/
+.spacer{
+  margin-bottom:0px; /* INDEX */
+  visibility: hidden; 
+}
+.spacer2{
+  margin-bottom:0px; /* PRISLUSENSTVO*/
+  visibility: hidden; 
+}
+.spacer3{
+  margin-bottom:0px; /* UI */
+  visibility: hidden; 
+}
+.spacer4{
+  margin-bottom:0px; /* RECENZIE */
+  visibility: hidden; 
+}
+.spacer5{
+  margin-bottom:0px; /* KONTAKT */
+  visibility: hidden; 
+}
+.spacer6{
+  margin-bottom:0px; /* POROVNANIE*/
+  visibility: hidden; 
+}
+
+/*TOTO POUZIVAM KVOLI RESPONZIVITE ABY MI NEZAVADZAL FOOTER*/
+
+.item-80{
+	display:inline-block;
+	flex-basis: auto;
+	width:80%;
+	height:200px;
+	margin:auto;
+	justify-content:center;
+}
+
+.item1{
+	display:inline-block;
+	 flex-basis: auto;
+	 width:50%;
+	 height:200px;
+	 margin:auto;
+}
+
+.item2{
+	display:inline-block;
+	 flex-basis: auto;
+	 width:40%;
+	 height:200px;
+	 margin:auto;
+	 margin-top:70px;
+}
+ @media screen and (max-width: 800px) {		/*INDEX*/
+	 .item2 {
+		 width:100%;
+		 padding-bottom:200px;
+		 margin-bottom:200px;
+	}
+	.item1{
+		width:100%;
+		padding-bottom:100px;
+	}
+	.spacer{
+	margin-bottom:280px;
+}
+}
+
+.item1-3{
+	display:inline-block;
+	 flex-basis: auto;
+	 width:32%;
+	 height:350px;
+	 margin-bottom:30px;
+
+}
+													/*PRISLUSENSTVO*/
+@media screen and (max-width: 1080px) {
+	 .item1-3 {
+		 width:50%;
+	}
+}
+													/*PRISLUSENSTVO*/
+@media screen and (max-width: 875px) {
+	 .item1-3 {
+		 width:100%;
+		 height:250px;
+		 margin-bottom:40px;
+	}
+	.spacer2{
+	margin-bottom:100px;
+}
+}
+
+.item1-4{
+	display:inline-block;
+	 flex-basis: auto;
+	 width:31%;
+	 height:700px;
+	 margin-bottom:30px;
+	/* background-color:orange;*/
+}
+
+@media screen and (max-width: 1140px) {		/*AUDIO*/
+	 .item1-4 {
+		 width:45%;
+		 padding-bottom:75px;
+	}
+}
+@media screen and (max-width: 920px) {		/*AUDIO*/
+	 .item1-4 {
+		 width:90%;
+		 margin-bottom:-100px;
+	}
+}
+
+.item2-4{
+	display:inline-block;
+	 flex-basis: auto;
+	 width:22%;
+	 height:300px;
+	 margin-bottom:50px;
+	 text-align:center;
+}
+
+@media screen and (max-width: 1370px) {		/*SPECS*/
+	 .item2-4 {
+		 width:44%;
+	}
+}
+
+@media screen and (max-width: 930px) {		/*SPECS*/
+	 .item2-4 {
+		 width:88%;
+	}
+}
+
+.item4{
+	display:inline-block;
+	flex-basis: auto;
+	width:17%;
+	margin-top:30px;
+	height:700px;
+	text-align:center;
+}
+
+.item42{
+	display:inline-block;
+	flex-basis: auto;
+	width:17%;
+	margin-top:30px;
+	height:700px;
+	text-align:center;
+}
+
+.item4-t{
+	display:inline-block;
+	flex-basis: auto;
+	width:29%;
+	margin-top:30px;
+	height:700px;
+	text-align:center;
+}
+
+
+@media screen and (max-width: 1450px) {		/*UI*/
+	 .item4 {
+		 width:44%;
+		 padding-bottom:350px;
+	}
+	.item42 {
+		 width:44%;
+		 padding-bottom:350px;
+	}
+	.item4-t{
+		width:44%;
+	}
+	.uiimg{
+		max-width:80%;
+	}
+}
+
+@media screen and (max-width: 1000px) {		/*UI*/
+	 .item4{
+		 width:90%;
+		 padding-bottom:400px;
+	}
+	.item42 {
+		 width:90%;
+		 padding-bottom:650px;
+		 margin-top:-150px;
+	}
+	.item4-t{
+		width:90%;
+		margin-top:500px;
+	}
+	.uiimg{
+		max-width:80%;
+	}
+	.spacer3{
+	margin-bottom:500px; 
+}
+}
+
+.fuga{
+	height:70px;
+}
+
+.item1-p{
+	display:inline-block;
+	flex-basis: auto;
+	width:20%;
+	margin-top:30px;
+	height:700px;
+}
+
+.item2-p{
+	display:inline-block;
+	flex-basis: auto;
+	width:30%;
+	margin-top:30px;
+	height:700px;
+}
+
+.item3-p{
+	display:inline-block;
+	flex-basis: auto;
+	width:45%;
+	margin-top:30px;
+	height:700px;
+}
+
+@media screen and (max-width: 1530px) {		/*KONTAKT / POROVNANIE*/
+	.spacer5{
+	margin-bottom:200px; 
+	}
+	.spacer6{
+		margin-bottom:300px;
+	}
+}
+@media screen and (max-width: 1295px) {		/*KONTAKT / POROVNANIE*/
+	.item1-p{
+	width:45%; 
+	}
+	.item3-p{
+		width:90%; 
+	}
+	.spacer5{
+	margin-bottom:50px; 
+	}
+}
+@media screen and (max-width: 710px) {		/*KONTAKT / POROVNANIE*/
+	.item1-p{
+	width:90%; 
+	}
+	.item2-p{
+	width:90%; 
+	}
+	.spacer5{
+	margin-bottom:70px; 
+	}
+	.spacer6{
+		margin-bottom:100px;
+	}
+}
+
+
+.item1-e{
+	display:inline-block;
+	flex-basis: auto;
+	width:45%;
+	margin-top:30px;
+
+}
+
+.item2-e{
+	display:inline-block;
+	flex-basis: auto;
+	width:15%;
+	margin-top:30px;
+
+	
+}
+
+.item3-e{
+	display:inline-block;
+	flex-basis: auto;
+	width:40%;
+	margin-top:30px;
+
+	
+}
+
+.itemr{
+	display:inline-block;
+	flex-basis:auto;
+	width:45%;
+	margin-top:30px;
+}
+
+@media screen and (max-width: 1140px) {		/*RECENZIE*/
+	 .itemr {
+		 width:95%;
+	}
+	.rectext{
+		padding-bottom:10px;
+	}
+}
+@media screen and (max-width: 1670px) {		/*RECENZIE*/
+	.spacer4{
+	margin-bottom:70px;	
+	}
+}
+
+/*niekde som potreboval medzery tak som vyuzival toto*/
+.pad-div-30{
+	padding-bottom:30px;
+}
+
+.ml-20{
+	margin-left:20px;
+}
+
+.mr-20{
+	margin-right:20px;
+}
+
+.medzera-5{
+	padding-bottom:5px;
+}
+
+.minus5{
+	margin-top:-5px;
+}
+
+/*FORMATOVANIE TEXTU*/
+
+.hlavicka-text {
+  font-size: 50px;
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+.btext{
+  font-size: 25px;
+  font-weight: 300;
+  line-height: 2;
+  letter-spacing: -1px;
+}
+
+.xtext{
+	font-size: 30px;
+	font-weight: 300;
+	line-height: 2;
+	letter-spacing: -1px;
+	text-align:center;
+}
+
+.atext{
+    font-size: 30px;
+    color: #BBB;
+    text-transform: uppercase;
+    padding-left: 5px;
+    border-left: 4px solid pink; 
+}
+
+.ctext{
+	font-size: 25px;
+	font-weight: 300;
+	line-height: 2;
+	letter-spacing: -1px;
+	text-align:center;
+}
+
+.hook{
+	font-size: 30px;
+	font-weight: 200;
+	line-height: 1;
+	letter-spacing: -1px;	
+	color:pink;
+	text-transform: uppercase;
+	
+}
+
+.hook2{
+	font-size: 45px;
+	font-weight: 200;
+	line-height: 1;
+	letter-spacing: -1px;	
+	color:pink;
+	text-transform: uppercase;
+	
+}
+
+.dtext{
+	font-size: 25px;
+	font-weight: 300;
+	line-height: 2;
+	letter-spacing: -1px;
+}
+
+.ftext{
+	font-size: 30px;
+	font-weight: 300;
+	line-height: 2;
+	letter-spacing: -1px;
+}
+
+.etext{
+	font-size: 20px;
+	font-weight: 300;
+	line-height: 2;
+	letter-spacing: -1px;
+}
+
+.zl-text{
+	color: #e69805; 
+}
+
+.rtext{
+	float:right;
+	margin-right:20px;
+	/*font-size:20px;*/
+}
+
+.rightup{
+	float:right;
+	margin-right:20px;
+	margin-top: -45px;
+	/*font-size:20px;*/
+}
+
+.rectext{
+	border: 2px solid #E75480;
+	padding-bottom:50px;
+	border-radius:15px;
+}
+
+.ltext{
+	margin-left:20px;
+}
+
+.cnt{
+	text-align:center;
+}
+
+.credits{
+	font-size:15px;
+	margin-left:80px;
+}
+.credits a{
+	color:grey;
+}
+.credits a:link {
+  text-decoration: none;
+}
+
+.credits a:visited {
+  text-decoration: none;
+}
+
+.credits a:hover {
+  text-decoration: underline;
+}
+
+.credits a:active {
+  text-decoration: underline;
+}
+
+/*FOOTER*/
+.pata {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: pink;
+   color: white;
+   height:7%;
+}
+
+
+/*OBRAZKY - video - mapa*/
+.main-img{
+	max-width:600px;
+	max-height:600px;
+	margin-top:40px;
+}
+
+.acc-img{
+	margin-top:-50px;
+	max-height:450px;	
+	max-width:350px;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.cam-img{
+	width:80%;
+	min-width:1300px;
+	margin-top:-220px;
+}
+
+.uiimg{
+	width:100%;
+	border: 5px solid pink;
+	border-radius:10px;
+	box-sizing:border-box;
+}
+
+.ikona{
+	width:20%;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.mapa{
+	width:80%;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.ikona2{
+	height:200px;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+/*TLACITKA*/
+.lang {
+	padding: 8px 18px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 12px;
+	margin-top:-20px;
+	transition-duration: 0.4s;
+	cursor: pointer;
+	background-color: white; 
+	color: black; 
+	border: 2px solid white;
+}
+
+.lang:hover {
+  background-color: pink;
+  color: white;
+}
+
+.submit {
+	padding: 12px 24px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 20px;
+	width:100%;
+	margin-top:30px;
+	transition-duration: 0.4s;
+	cursor: pointer;
+	background-color: white; 
+	color: black; 
+	border: 3px solid #E75480;
+}
+
+.submit:hover {
+  background-color: #E75480;
+  color: white;
+}
+/*TEST*/
+.testbox{
+	background-color:red;
+}
+
+
+/*Audio štylizácia*/
+
+audio::-webkit-media-controls-panel {
+  background-color: pink;
+}
+
+audio::-webkit-media-controls-play-button {
+  background-color: white;
+  border-radius: 50%;
+}
+
+audio::-webkit-media-controls-play-button:hover {
+  background-color: #e84181;
+}
+
+audio{
+	width:100%;
+}
+
+
+/*Galéria*/
+/*
+
+
+
+img {
+	 max-width: 100%;
+	 vertical-align: top;
+}
+
+TOTO MAM AJ V <STYLE> TAGU NA INDEX.HTML LEBO MI TO TU ROBI HLUPOSTI
+*/
+ .galeria {
+	 box-sizing: border-box;
+	 display: flex;
+	 margin: 10px auto;
+	 max-width: 400px;
+	 position: relative;
+	 padding-top: 66.6666666667%;
+}
+ @media screen and (min-width: 400px) {				/*INDEX*/
+	 .galeria {
+		 box-sizing: border-box;
+		 padding-top: 520px;
+	}
+}
+ .galeria__img {
+	 box-sizing: border-box;
+	 position: absolute;
+	 top: 0;
+	 left: 0;
+	 opacity: 0;
+	 transition: opacity 0.3s ease-in-out;
+}
+ .galeria__nahlad {
+	 min-height:150px;
+	 min-width:100px;
+	 box-sizing: border-box;
+	 padding-top: 6px;
+	 margin: 6px;
+	 display: block;
+}
+ .galeria__selector {
+	 position: absolute;
+	 opacity: 0;
+	 visibility: hidden;
+}
+ .galeria__selector:checked + .galeria__img {
+	 opacity: 1;
+}
+ .galeria__selector:checked ~ .galeria__nahlad > img {
+	 box-shadow: 0 0 0 3px pink;
+}
+
+/*FORMULAR*/
+.meno{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 3px solid #E75480;
+}
+
+.mail{
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	box-sizing: border-box;
+	border: none;
+	border-bottom: 3px solid #E75480;
+}
+
+input::placeholder{
+	font-size:20px;
+}
+
+input:focus{
+    outline: none;
+}
+
+textarea {
+  width: 100%;
+  height: 250px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #E75480;
+  border-radius: 4px;
+  background-color: #dbdbdb;
+  font-size: 20px;
+  resize: none;
+  margin-top:30px;
+}
+
+textarea:focus{
+	outline:none;
+}
+
+/*TABULKA*/
+.tabulka {
+  border-collapse:collapse;
+  width: 100%;
+}
+
+.tabulka td, .tabulka th {
+  border: 1px solid white;
+  padding: 8px;
+  line-height:30px;
+}
+
+.tabulka tr:nth-child(even){background-color: #f2f2f2;}
+
+.tabulka tr:hover {background-color: pink;}
+
+.tabulka th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: pink;
+  color: grey;
+  height: 20px;
+}
+
+
+/* keyframe anim*/
+
+.logo:hover{
+    animation: rotate 1s ease forwards;
+}
+    @keyframes rotate{
+        0%{
+            transform: rotateY(0deg);
+        }
+        100%{
+            transform: rotateY(360deg);
+        }
+}
